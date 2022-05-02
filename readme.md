@@ -1,6 +1,6 @@
 # Curriculum vitae
 <!-- badges: start -->
-[![License](https://img.shields.io/github/license/mcanouil/curriculum-vitae)](LICENSE)
+[![License](https://img.shields.io/github/pmatisic/cv/blob/main/LICENSE)](LICENSE)
 [![CV build status](https://github.com/mcanouil/curriculum-vitae/workflows/render-cv/badge.svg)](https://www.overleaf.com/read/dbdggnggptsr)
 <!-- badges: end -->
 
