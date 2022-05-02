@@ -1,7 +1,6 @@
 # Curriculum vitae
-<!-- badges: start -->
-![image](https://user-images.githubusercontent.com/93230776/166340744-11333d65-6329-4556-a4ae-2b04a7fcc171.png)](LICENSE)
-[![Overleaf](https://github.com/mcanouil/curriculum-vitae/workflows/render-cv/badge.svg)](https://www.overleaf.com/read/dbdggnggptsr)
-<!-- badges: end -->
 
-This is the repository for the CV of Petar Matišić.
+[![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Overleaf](https://img.shields.io/badge/LaTeX-Overleaf-green.svg)](https://www.overleaf.com/read/dbdggnggptsr)
+
+This is the repository for the CV of [Petar Matišić](https://www.linkedin.com/in/petarmatisic/).
