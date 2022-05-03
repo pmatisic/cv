@@ -9,6 +9,6 @@
   
 </div>
 
-## How It Works
+## How It Works/Usage
 
 To generate the pdf, simply run `make build` which calls the script defined in [`build.sh`](https://github.com/pmatisic/cv/blob/main/build.sh).
