@@ -10,5 +10,5 @@ biber --output-directory=$OUTDIR $FILE
 lualatex $OPTIONS --output-directory=$OUTDIR $FILE.tex
 lualatex $OPTIONS --output-directory=$OUTDIR $FILE.tex
 
-cp $OUTDIR/$FILE.pdf .
+cp $OUTDIR/$FILE.pdf ..
 cp $OUTDIR/$FILE.pdf petarmatisic.pdf
