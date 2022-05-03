@@ -8,3 +8,7 @@
   This is the repository for the CV of [Petar Matišić](https://www.linkedin.com/in/petarmatisic/).
   
 </div>
+
+## How It Works
+
+To generate the pdf, simply run `make build` which calls the script defined in [`build.sh`](https://github.com/pmatisic/cv/blob/main/build.sh).
