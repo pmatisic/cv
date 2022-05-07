@@ -1,5 +1,5 @@
 OUTPUT_DIR=_build
-FILE=main
+FILE=cv_7
 
 build:
 	sh build.sh $(OUTPUT_DIR) $(FILE)
