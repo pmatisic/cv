@@ -1,14 +1,12 @@
-OUTDIR=$1
-FILE=$2
+#!/bin/sh
+OUTPUT_DIR=_build
+FILE=cv_7
 
-OPTIONS="--synctex=1 -interaction=nonstopmode"
+build:
+        sh build.sh $(OUTPUT_DIR) $(FILE)
 
-mkdir -p $OUTDIR
-
-lualatex $OPTIONS --output-directory=$OUTDIR $FILE.tex
-biber --output-directory=$OUTDIR $FILE
-lualatex $OPTIONS --output-directory=$OUTDIR $FILE.tex
-lualatex $OPTIONS --output-directory=$OUTDIR $FILE.tex
-
-cp $OUTDIR/$FILE.pdf .
-cp $OUTDIR/$FILE.pdf petarmatisic.pdf
+clean:
+        rm -rf $(OUTPUT_DIR)
+        rm -f $(FILE).pdf
+        rm -f cv_7.bcf
+        rm -f cv_7.run.xml
