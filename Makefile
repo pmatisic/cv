@@ -7,5 +7,5 @@ build:
 clean:
 	rm -rf $(OUTPUT_DIR)
 	rm -f $(FILE).pdf
-	rm -f main.bcf
-	rm -f main.run.xml
+	rm -f cv_7.bcf
+	rm -f cv_7.run.xml
