@@ -1,4 +1,5 @@
 # Curriculum vitae
+---
   
 <div align="center">
   
@@ -9,6 +10,6 @@
   
 </div>
 
-## How It Works
+### How It Works
 
 To generate the pdf, simply run `make build` which calls the script defined in [`build.sh`](https://github.com/pmatisic/cv/blob/main/build.sh).
