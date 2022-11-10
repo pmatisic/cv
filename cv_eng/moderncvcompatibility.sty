@@ -1,4 +1,4 @@
-%% start of file `moderncvstylecasual.sty'.
+%% start of file `moderncvcompatibility.sty'.
 %% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
 %% Copyright 2021-2022 Petar Matišić (matisicpetar@gmail.com).
 %
@@ -11,7 +11,7 @@
 %                identification
 %-------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{moderncvstylecasual}[2012/10/31 v1.2.0 modern curriculum vitae and letter style scheme: casual]
+\ProvidesPackage{moderncvcompatibility}[2012/10/31 v1.2.0 modern curriculum vitae and letter compatibility patches]
 
 
 %-------------------------------------------------------------------------------
@@ -22,168 +22,64 @@
 %-------------------------------------------------------------------------------
 %                package options
 %-------------------------------------------------------------------------------
-\RequirePackage{moderncvstyleclassic}
+% old casual option (version 0.1)
+%\DeclareOption{casual}{\input{moderncvstylecasual.sty}}
 
+% old classic option (version 0.1)
+%\DeclareOption{classic}{\input{moderncvstyleclassic.sty}}
 
-%-------------------------------------------------------------------------------
-%                overall style definition
-%-------------------------------------------------------------------------------
-% commands
-%   footer symbol used to separate footer elements
-\newcommand*{\footersymbol}{%
-    {~~~{\rmfamily\textbullet}~~~}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
-%   internal command to add an element to the footer
-%   it collects the elements in a temporary box, and checks when to flush the box
-\newsavebox{\footerbox}%
-\newsavebox{\footertempbox}%
-\newlength{\footerwidth}%
-\newlength{\footerboxwidth}%
-\newif\if@firstfooterelement\@firstfooterelementtrue%
-%   adds an element to the footer, separated by footersymbol
-%   usage: \addtofooter[footersymbol]{element}
-\newcommand*{\addtofooter}[2][\footersymbol]{%
-  \if@firstfooterelement%
-    \savebox{\footertempbox}{\usebox{\footerbox}#2}%
-  \else%
-    \savebox{\footertempbox}{\usebox{\footerbox}#1#2}\fi%
-  \settowidth{\footerboxwidth}{\usebox{\footertempbox}}%
-  \ifnum\footerboxwidth<\footerwidth%
-    \savebox{\footerbox}{\usebox{\footertempbox}}%
-    \@firstfooterelementfalse%
-  \else%
-    \flushfooter\\%
-    \savebox{\footerbox}{#2}%
-    \savebox{\footertempbox}{#2}%
-    \settowidth{\footerboxwidth}{\usebox{\footerbox}}%
-    \@firstfooterelementfalse\fi}
-%   internal command to flush the footer
-\newcommand*{\flushfooter}{%
-  \strut\usebox{\footerbox}%
-  \savebox{\footerbox}{}%
-  \savebox{\footertempbox}{}%
-  \setlength{\footerboxwidth}{0pt}}
+\DeclareOption*{}
 
+% process given options
+\ProcessOptions\relax
 
 %-------------------------------------------------------------------------------
-%                resume style definition
+%                definitions
 %-------------------------------------------------------------------------------
-% fonts
-\renewcommand*{\namefont}{\fontsize{38}{40}\mdseries\upshape}
-\renewcommand*{\addressfont}{\normalsize\mdseries\slshape}
+% compatibility with version 0.1
+\newcommand*{\cvresume}[2]{\cvlistdoubleitem{#1}{#2}}
 
-% commands
-\renewcommand*{\makecvtitle}{%
-  % recompute lengths (in case we are switching from letter to resume, or vice versa)
-  \recomputecvlengths%
-  % ensure footer with personal information
-  \makecvfooter%
-  % optional picture
-  \newbox{\makecvtitlepicturebox}%
-  \savebox{\makecvtitlepicturebox}{%
-    \ifthenelse{\isundefined{\@photo}}%
-      {}%
-      {%
-       \setlength\fboxrule{\@photoframewidth}%
-       \ifdim\@photoframewidth=0pt%
-         \setlength{\fboxsep}{0pt}\fi%
-       {\color{color1}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}%
-  \usebox{\makecvtitlepicturebox}%
-  % name
-  \@initializelength{\makecvtitlepicturewidth}%
-  \settowidth{\makecvtitlepicturewidth}{\usebox{\makecvtitlepicturebox}}%
-  \parbox[b]{\textwidth-\makecvtitlepicturewidth}{%
-    \raggedleft\namefont{\color{color2!50}\@firstname} {\color{color2}\@familyname}}\\[-.35em]% alternate design: \MakeLowercase and no space
-  {\color{color2!50}\rule{\textwidth}{.25ex}}%
-  % optional title
-  \ifthenelse{\equal{\@title}{}}{}{\\[1.25em]\null\hfill\titlestyle{\@title}}\\[2.5em]% \null is required as there is no box on the line after \\, so glue (and leaders) disappears; this is in contrast to after \par, where the next line starts with an indent box (even after \noindent).
-  % optional quote
-  \ifthenelse{\isundefined{\@quote}}%
-    {}%
-    {{\null\hfill\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\hfill\null\\[2.5em]}}%
-  \par}% to avoid weird spacing bug at the first section if no blank line is left after \maketitle
+% compatibility with versions <= 0.2
+% section, cvline, ... with width argument...
+%\newcommand*{\section}[2][0.825]{%
+%  \closesection{}%
+%  \@sectionopentrue%
+%  \addcontentsline{toc}{part}{#2}
+%  \begin{longtable}[t]{@{}r@{\hspace{.025\textwidth}}@{}p{#1\textwidth}@{}}%
+%%  \colorrule{.15\textwidth}&\mbox{\color{sectiontitlecolor}\sectionfont#2}\\[1ex]}%
+%  {\color{sectionrectanglecolor}\rule{0.15\textwidth}{1ex}}&\mbox{\color{sectiontitlecolor}\sectionfont#2}\\[1ex]}%
+%\newcommand*{\cvline}[3][.825]{%
+%  \begin{minipage}[t]{\hintscolumnwidth}\raggedleft\small\sffamily#2\end{minipage}&\begin{minipage}[t]{\maincolumnwidth}#3\end{minipage}\\}
+%\newcommand*{\cvitem}[3][.825]{%
+%  \cvline[#1]{#2}{#3\vspace*{.75em}}}   % the \vspace*{} inside the cvline environment is a hack... (should conceptually be outside the environment)
 
-\renewcommand*{\makecvfooter}{%
-  \setlength{\footerwidth}{0.8\textwidth}%
-  \fancypagestyle{plain}{%
-    \fancyfoot[c]{%
-      \parbox[b]{\footerwidth}{%
-        \centering%
-        \color{color2}\addressfont%
-        \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
-          \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}\flushfooter\@firstfooterelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
-        \ifthenelse{\isundefined{\@mobile}}{}{\addtofooter{\mobilesymbol\@mobile}}%
-        \ifthenelse{\isundefined{\@phone}}{}{\addtofooter{\phonesymbol\@phone}}%
-        \ifthenelse{\isundefined{\@fax}}{}{\addtofooter{\faxsymbol\@fax}}%
-        \ifthenelse{\isundefined{\@email}}{}{\addtofooter{\emailsymbol\emaillink{\@email}}}%
-        	\ifthenelse{\isundefined{\@homepage}}{}{%
-	\ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
-	{\addtofooter{\homepagesymbol\httplink{\@homepage}}}%
-	{\addtofooter{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}}% 
-        \ifthenelse{\isundefined{\@extrainfo}}{}{\addtofooter{\@extrainfo}}%
-        \ifthenelse{\lengthtest{\footerboxwidth=0pt}}{}{\flushfooter}% the lengthtest is required to avoid flushing an empty footer, which could cause a blank line due to the \\ after the address, if no other personal info is used
-        }}}%
-  \pagestyle{plain}}
+% compatibility with versions <= 0.5
+%\newcommand*{\cvitem}[2]{\cvline{#1}{#2}}
+%\newcommand*{\moderncvstyle}[1]{\moderncvtheme{#1}}
 
+% compatibility with versions <= 0.7
+\newcommand*{\closesection}{}
+\newcommand*{\emptysection}{}
+\newcommand*{\sethintscolumnlength}[1]{%
+  \setlength{\hintscolumnwidth}{#1}%
+  \recomputelengths}
+\newcommand*{\sethintscolumntowidth}[1]{%
+  \settowidth{\hintscolumnwidth}{#1}%
+  \recomputelengths}
 
-%-------------------------------------------------------------------------------
-%                letter style definition
-%-------------------------------------------------------------------------------
-\renewcommand*{\makelettertitle}{%
-  % recompute lengths (in case we are switching from letter to resume, or vice versa)
-  \recomputeletterlengths%
-  % ensure footer with personal information
-  \makeletterfooter%
-  % recipient block
-  \begin{minipage}[t]{.5\textwidth}
-    \raggedright%
-    \addressfont%
-    {\bfseries\upshape\@recipientname}\\%
-    \@recipientaddress%
-  \end{minipage}
-  % date
-  \hfill% US style
-%  \\[1em]% UK style
-  \@date\\[2em]% US informal style: "April 6, 2006"; UK formal style: "05/04/2006"
-  % opening
-  \raggedright%
-  \@opening\\[1.5em]%
-  % ensure no extra spacing after \makelettertitle due to a possible blank line
-%  \ignorespacesafterend% not working
-  \hspace{0pt}\par\vspace{-\baselineskip}\vspace{-\parskip}}
+% compatibility with versions <= 0.15
+\newcommand*{\cvline}[2]{\cvitem{#1}{#2}}
+\newcommand*{\cvlanguage}[3]{\cvitemwithcomment{#1}{#2}{#3}}
+\newcommand*{\cvcomputer}[4]{\cvdoubleitem{#1}{\small#2}{#3}{\small#4}}
+\newcommand*{\moderncvtheme}[2][blue]{%
+  \moderncvcolor{#1}%
+  \moderncvstyle{#2}}
 
-\renewcommand*{\makeletterfooter}{%
-  \setlength{\footerwidth}{0.8\textwidth}%
-  \fancypagestyle{plain}{%
-    \fancyfoot[c]{%
-      \parbox[b]{\footerwidth}{%
-        \centering%
-        \addressfont\color{color2}%
-        \vspace{-\baselineskip}% to cancel out the extra vertical space taken by the name (below) and ensure perfect alignment of letter and cv footers
-        \strut{\bfseries\upshape\@firstname~\@familyname}\\% the \strut is required to ensure the line is exactly \baselineskip tall
-        \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
-          \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}\flushfooter\@firstfooterelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
-        \ifthenelse{\isundefined{\@mobile}}{}{\addtofooter{\mobilesymbol\@mobile}}%
-        \ifthenelse{\isundefined{\@phone}}{}{\addtofooter{\phonesymbol\@phone}}%
-        \ifthenelse{\isundefined{\@fax}}{}{\addtofooter{\faxsymbol\@fax}}%
-        \ifthenelse{\isundefined{\@email}}{}{\addtofooter{\emailsymbol\emaillink{\@email}}}%
-        	\ifthenelse{\isundefined{\@homepage}}{}{%
-	\ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
-	{\addtofooter{\homepagesymbol\httplink{\@homepage}}}%
-	{\addtofooter{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}}%
-        \ifthenelse{\isundefined{\@extrainfo}}{}{\addtofooter{\@extrainfo}}%
-        \ifthenelse{\lengthtest{\footerboxwidth=0pt}}{}{\flushfooter}% the lengthtest is required to avoid flushing an empty footer, which could cause a blank line due to the \\ after the address, if no other personal info is used
-        }}}%
-  \pagestyle{plain}}
-
-\renewcommand*{\makeletterclosing}{
-  \@closing\\[3em]%
-  {\bfseries\@firstname~\@familyname}%
-  \ifthenelse{\isundefined{\@enclosure}}{}{%
-    \\%
-    \vfil%
-    {\color{color2}\itshape\enclname: \@enclosure}}%
-    \vfil}
+% compatibility with versions <= 0.19
+\newcommand*{\maketitle}{\makecvtitle}%
+\title{}% to avoid LaTeX complaining that \maketitle is a called without first a call to \title
+\newcommand*{\maketitlenamewidth}{\makecvtitlenamewidth}
 
 
 \endinput
-%% end of file `moderncvstylecasual.sty'.
+%% end of file `moderncvcompatibility.sty'.
