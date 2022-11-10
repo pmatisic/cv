@@ -466,6 +466,4 @@
 
 
 \endinput
-
-
 %% end of file `moderncv.cls'.
