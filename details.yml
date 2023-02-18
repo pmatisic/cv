@@ -1,0 +1,94 @@
+---
+# Personal details
+
+name: Petar Matišić
+address:
+- Lanište 5D
+- 10000 Zagreb
+- Croatia (HR)
+phone: "+385 97 6262 167"
+email: pmatisic@foi.hr
+urls:
+- linkedin.com/in/petarmatisic
+- github.com/pmatisic
+# quote: "Improvement makes strait roads, but the crooked roads without Improvement, are roads of Genius. -- William Blake"
+
+# Sections
+
+intro: "Petar Matišić was born on 24 April 2001 in the city of Livno, Bosnia and Herzegovina (BA). Since his young years, he has been living in Gornji Vakuf-Uskoplje (BA), where he attended elementary and high school. After finishing elementary school, he enrolled in an electrical engineering high school, thus following his goal from an early age -- to be an engineer. After excellent success in high school, he began to upgrade his knowledge after enrolling at the Faculty of Organization and Informatics in Varaždin (HR), University of Zagreb. He is currently in his first year of graduate university study of informatics. His fields of interest in the context of research are various areas of computer science, such as deep learning and computer vision. Along with his academic education, he is an active member of the local and international society, with a volunteering and active youth work."
+
+education:
+- year: 2022 -- present
+  degree: Master of Informatics
+  subject: Information and Software Engineering
+  institute: University of Zagreb, Faculty of Organization and Informatics
+  city: Varaždin (HR)
+- year: 2019 -- 2022
+  degree: Bachelor of Science in Information Technology
+  subject: Information Systems
+  institute: University of Zagreb, Faculty of Organization and Informatics
+  city: Varaždin (HR)
+- year: 2015 -- 2019
+  degree: High School Diploma
+  subject: Electrical Engineering
+  institute: High School Uskoplje
+  grade: CGPA -- 5.00/5.00
+  city: Gornji Vakuf - Uskoplje (BA)
+
+thesis:
+- name: Bachelor's Thesis
+  title: Computer Vision and Object Recognition Using the OpenCV Library
+  supervisor: Bogdan Okreša Đurić, PhD
+  url: urn.nsk.hr/urn:nbn:hr:211:697633
+  description: This thesis deals with the theoretical foundations of classical problems of computer vision, image processing and machine vision for determining certain objects, features or activities such as hand detection and its actions.
+
+awards:
+- year: 2019
+  name: Student of the generation
+  issuer: Ministry of science, education, youth, culture and sports, Central Bosnia Canton, Federation of Bosnia and Herzegovina
+  description: The highest value of the high school award, according to the overall grade point average and according to the upbringing and educational contribution during the all four high school classes.
+
+skills:
+- technical:
+  languages: C++, Java, C#, Python
+  frameworks: .NET, SpringBoot, TensorFlow, OpenCV
+  databases: PostgreSQL, MySQL, MSSQL
+  tools: VS Code, IntelliJ, Visual Studio, git
+  systems: Windows, Linux (Manjaro, Ubuntu, shell)
+  office: MS Office, LaTeX, Adobe Photoshop, Jira
+  general: approachable, by nature friendly, creative in problem solving, quite good at public speaking
+  licences: Driving licence (B category)
+
+languages:
+- language: Croatian
+  proficiency: Native
+- language: English
+  proficiency: Intermediate -- B2
+- language: German
+  proficiency: Intermediate -- B2
+
+interests: "Music and football lover. Graduated from elementary music school in piano with an CGPA 4.8 out of 5.0 and played semi-professional football for 13 years as a goalkeeper.\\ Animal lover. Especially Shiba Inu and Scottish Fold."
+
+note: "A list of all my projects can be viewed on my GitHub profile, which is linked on the first page of this document."
+
+# experience:
+# - years: 
+#   employer: 
+#   job: 
+#   city: 
+# - years: 
+#   employer: 
+#   job: 
+#   city: 
+# - years: 
+#   employer: 
+#   job: 
+#   city: 
+
+# Settings
+
+mainfont: Hoefler Text
+fontsize: 10pt
+lang: en-GB
+geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
+---
