@@ -50,12 +50,12 @@ awards:
 
 skills:
 - technical:
-  languages: C++, Java, Python
+  languages: C++, Java, Python, SQL
   frameworks: .NET, Spring
   tools: VS Code, IntelliJ, Eclipse, Sublime, git
   systems: Windows, Linux (Manjaro, Ubuntu, shell scripting)
   office: MS Office, LaTeX, Adobe Photoshop, Jira
-  general: approachable, naturally friendly, innovative problem solver, proficient in public speaking, analytical thinker, detail-oriented with a systems perspective, passionate about technology-driven solutions
+  general: approachable, naturally friendly, innovative problem solver, analytical thinker, detail-oriented with a systems perspective, passionate about technology-driven solutions
   licences: Driving licence (B category)
 
 languages:
