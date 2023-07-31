@@ -15,16 +15,16 @@ urls:
 
 # Sections
 
-intro: "Petar Matišić was born on 24 April 2001 in the city of Livno, Bosnia and Herzegovina (BA). Since his young years, he has been living in Gornji Vakuf-Uskoplje (BA), where he attended elementary and high school. After finishing elementary school, he enrolled in an electrical engineering high school, thus following his goal from an early age -- to be an engineer. After excellent success in high school, he began to upgrade his knowledge after enrolling at the Faculty of Organization and Informatics in Varaždin (HR), University of Zagreb. He is currently in his first year of graduate university study of informatics. His fields of interest in the context of research are various areas of computer science, such as deep learning and computer vision. Along with his academic education, he is an active member of the local and international society, with a volunteering and active youth work."
+intro: "Petar Matišić was born on 24 April 2001 in the city of Livno, Bosnia and Herzegovina (BA). From a young age, he has lived in Gornji Vakuf-Uskoplje (BA) where he completed both his elementary and high school education. After elementary school, he pursued his passion for engineering by enrolling in an electrical engineering high school. Given his dedication and achievements in high school, he furthered his education at the Faculty of Organization and Informatics in Varaždin (HR), a part of the University of Zagreb. He is currently in his final year of graduate studies in informatics. His research interests span various areas of computer science, including deep learning and computer vision. In addition to his academic pursuits, Petar is an active member of both local and international communities, engaging in volunteer work and active youth programs."
 
 education:
 - year: 2022 -- present
-  degree: Master of Informatics
+  degree: Master of Science in Informatics
   subject: Information and Software Engineering
   institute: University of Zagreb, Faculty of Organization and Informatics
   city: Varaždin (HR)
 - year: 2019 -- 2022
-  degree: Bachelor of Science in Information Technology
+  degree: Bachelor of Science in Informatics
   subject: Information Systems
   institute: University of Zagreb, Faculty of Organization and Informatics
   city: Varaždin (HR)
@@ -50,13 +50,12 @@ awards:
 
 skills:
 - technical:
-  languages: C++, Java, C#, Python
-  frameworks: .NET, SpringBoot, TensorFlow, OpenCV
-  databases: PostgreSQL, MySQL, MSSQL
-  tools: VS Code, IntelliJ, Visual Studio, git
-  systems: Windows, Linux (Manjaro, Ubuntu, shell)
+  languages: C++, Java, Python
+  frameworks: .NET, Spring
+  tools: VS Code, IntelliJ, Eclipse, Sublime, git
+  systems: Windows, Linux (Manjaro, Ubuntu, shell scripting)
   office: MS Office, LaTeX, Adobe Photoshop, Jira
-  general: approachable, by nature friendly, creative in problem solving, quite good at public speaking
+  general: approachable, naturally friendly, innovative problem solver, proficient in public speaking, analytical thinker, detail-oriented with a systems perspective, passionate about technology-driven solutions
   licences: Driving licence (B category)
 
 languages:
