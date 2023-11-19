@@ -3,86 +3,86 @@
 
 name: Petar Matišić
 address:
-- Lanište 5D
-- 10000 Zagreb
-- Croatia (HR)
+  - Lanište 5D
+  - 10000 Zagreb
+  - Croatia (HR)
 phone: "+385 97 6262 167"
 email: pmatisic@foi.hr
 urls:
-- linkedin.com/in/petarmatisic
-- github.com/pmatisic
+  - linkedin.com/in/petarmatisic
+  - github.com/pmatisic
 # quote: "Improvement makes strait roads, but the crooked roads without Improvement, are roads of Genius. -- William Blake"
 
 # Sections
 
-intro: "Petar Matišić was born on 24 April 2001 in the city of Livno, Bosnia and Herzegovina (BA). From a young age, he has lived in Gornji Vakuf-Uskoplje (BA) where he completed both his elementary and high school education. After elementary school, he pursued his passion for engineering by enrolling in an electrical engineering high school. Given his dedication and achievements in high school, he furthered his education at the Faculty of Organization and Informatics in Varaždin (HR), a part of the University of Zagreb. He is currently in his final year of graduate studies in informatics. His research interests span various areas of computer science, including deep learning and computer vision. In addition to his academic pursuits, Petar is an active member of both local and international communities, engaging in volunteer work and active youth programs."
+intro: "Petar Matišić was born on 24 April 2001 in the city of Livno, Bosnia and Herzegovina (BA). From a young age, he has lived in Gornji Vakuf-Uskoplje (BA) where he completed both his elementary and high school education. After elementary school, he pursued his passion for engineering by enrolling in an electrical engineering high school. Given his dedication and achievements in high school, he furthered his education at the Faculty of Organization and Informatics in Varaždin (HR), a part of the University of Zagreb. He is currently in his final year of graduate studies in informatics. His research interests span various areas of computer science, including software engineering and machine learning. In addition to his academic pursuits, Petar is an active member of both local and international communities, engaging in volunteer work and active youth programs."
 
 education:
-- year: 2022 -- present
-  degree: Master of Science in Informatics
-  subject: Information and Software Engineering
-  institute: University of Zagreb, Faculty of Organization and Informatics
-  city: Varaždin (HR)
-- year: 2019 -- 2022
-  degree: Bachelor of Science in Informatics
-  subject: Information Systems
-  institute: University of Zagreb, Faculty of Organization and Informatics
-  city: Varaždin (HR)
-- year: 2015 -- 2019
-  degree: High School Diploma
-  subject: Electrical Engineering
-  institute: High School Uskoplje
-  grade: CGPA -- 5.00/5.00
-  city: Gornji Vakuf - Uskoplje (BA)
+  - year: 2022 -- present
+    degree: Master of Science in Informatics
+    subject: Information and Software Engineering
+    institute: University of Zagreb, Faculty of Organization and Informatics
+    city: Varaždin (HR)
+  - year: 2019 -- 2022
+    degree: Bachelor of Science in Informatics
+    subject: Information Systems
+    institute: University of Zagreb, Faculty of Organization and Informatics
+    city: Varaždin (HR)
+  - year: 2015 -- 2019
+    degree: High School Diploma
+    subject: Electrical Engineering
+    institute: High School Uskoplje
+    grade: CGPA -- 5.00/5.00
+    city: Gornji Vakuf - Uskoplje (BA)
 
 thesis:
-- name: Bachelor's Thesis
-  title: Computer Vision and Object Recognition Using the OpenCV Library
-  supervisor: Bogdan Okreša Đurić, PhD
-  url: urn.nsk.hr/urn:nbn:hr:211:697633
-  description: This thesis deals with the theoretical foundations of classical problems of computer vision, image processing and machine vision for determining certain objects, features or activities such as hand detection and its actions.
+  - name: Bachelor's Thesis
+    title: Computer Vision and Object Recognition Using the OpenCV Library
+    supervisor: Bogdan Okreša Đurić, PhD
+    url: urn.nsk.hr/urn:nbn:hr:211:697633
+    description: This thesis deals with the theoretical foundations of classical problems of computer vision, image processing and machine vision for determining certain objects, features or activities such as hand detection and its actions.
 
 awards:
-- year: 2019
-  name: Student of the generation
-  issuer: Ministry of science, education, youth, culture and sports, Central Bosnia Canton, Federation of Bosnia and Herzegovina
-  description: The highest value of the high school award, according to the overall grade point average and according to the upbringing and educational contribution during the all four high school classes.
+  - year: 2019
+    name: Student of the generation
+    issuer: Ministry of science, education, youth, culture and sports, Central Bosnia Canton, Federation of Bosnia and Herzegovina
+    description: The highest value of the high school award, according to the overall grade point average and according to the upbringing and educational contribution during the all four high school classes.
 
 skills:
-- technical:
-  languages: C++, Java, Python, SQL
-  frameworks: .NET, Spring
-  tools: VS Code, IntelliJ, Eclipse, Sublime, git
-  systems: Windows, Linux (Manjaro, Ubuntu, shell scripting)
-  office: MS Office, LaTeX, Adobe Photoshop, Jira
-  general: approachable, naturally friendly, innovative problem solver, analytical thinker, detail-oriented with a systems perspective, passionate about technology-driven solutions
-  licences: Driving licence (B category)
+  - technical:
+    languages: C++, Java, Python, SQL
+    frameworks: .NET, JEE, Spring
+    tools: VS Code, IntelliJ, Eclipse, PyCharm, Sublime, git
+    systems: Windows, Linux (Manjaro, Ubuntu, shell scripting)
+    office: MS Office, LaTeX, Adobe Photoshop, Jira
+    general: approachable, naturally friendly, innovative problem solver, analytical thinker, detail-oriented with a systems perspective, passionate about technology-driven solutions
+    licences: Driving licence (B category)
 
 languages:
-- language: Croatian
-  proficiency: Native
-- language: English
-  proficiency: Intermediate -- B2
-- language: German
-  proficiency: Intermediate -- B2
+  - language: Croatian
+    proficiency: Native
+  - language: English
+    proficiency: Intermediate -- B1
+  - language: German
+    proficiency: Basic -- A2
 
 interests: "Music and football lover. Graduated from elementary music school in piano with an CGPA 4.8 out of 5.0 and played semi-professional football for 13 years as a goalkeeper.\\ Animal lover. Especially Shiba Inu and Scottish Fold."
 
 note: "A list of all my projects can be viewed on my GitHub profile, which is linked on the first page of this document."
 
 # experience:
-# - years: 
-#   employer: 
-#   job: 
-#   city: 
-# - years: 
-#   employer: 
-#   job: 
-#   city: 
-# - years: 
-#   employer: 
-#   job: 
-#   city: 
+# - years:
+#   employer:
+#   job:
+#   city:
+# - years:
+#   employer:
+#   job:
+#   city:
+# - years:
+#   employer:
+#   job:
+#   city:
 
 # Settings
 
@@ -91,3 +91,4 @@ fontsize: 10pt
 lang: en-GB
 geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
 ---
+
